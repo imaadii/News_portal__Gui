@@ -15,7 +15,7 @@ const NewsComponent = () => {
         setError(null); // Reset error state
 
         axios
-            .get(`https://news-portal-suby.onrender.com/api/news?category=${category}`)
+            .get(`https://news-portal-suby.onrender.com/api/news?category=${category.toLowerCase()}`)
             .then((response) => {
                 setNews(response.data); // Set the news data
                 setLoading(false); // Stop the loading spinner
@@ -47,6 +47,7 @@ const NewsComponent = () => {
 
     // Function to truncate description after 40 words
     const truncateDescription = (description, wordLimit = 40) => {
+        if (!description) return ""; // If description is null or undefined, return an empty string
         const words = description.split(" ");
         if (words.length > wordLimit) {
             return words.slice(0, wordLimit).join(" ") + "..."; // Truncate after 40 words
@@ -90,24 +91,28 @@ const NewsComponent = () => {
                     </ul>
                 </aside>
                 <main className="news-articles">
-                    {news.map((article) => (
-                        <div key={article.article_id} className="news-card">
-                            <img
-                                src={article.image_url}
-                                alt={article.title}
-                                className="news-image"
-                            />
-                            <div className="news-content">
-                                <h3>{article.title}</h3>
-                                <p>
-                                    {truncateDescription(article.description)} {/* Truncate long descriptions */}
-                                </p>
-                                <a href={article.link} target="_blank" rel="noopener noreferrer">
-                                    Read More
-                                </a>
+                    {news.length > 0 ? (
+                        news.map((article) => (
+                            <div key={article.article_id} className="news-card">
+                                <img
+                                    src={article.image_url || "https://via.placeholder.com/150"}
+                                    alt={article.title}
+                                    className="news-image"
+                                />
+                                <div className="news-content">
+                                    <h3>{article.title}</h3>
+                                    <p>
+                                        {truncateDescription(article.description)} {/* Truncate long descriptions */}
+                                    </p>
+                                    <a href={article.link} target="_blank" rel="noopener noreferrer">
+                                        Read More
+                                    </a>
+                                </div>
                             </div>
-                        </div>
-                    ))}
+                        ))
+                    ) : (
+                        <p>No articles available.</p>
+                    )}
                 </main>
             </div>
         </div>
