@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import "./App.css"; // Import the CSS file for styling
+import "./Gauri.css";
 
 const NewsComponent = () => {
     const [news, setNews] = useState([]); // News data
@@ -8,6 +8,8 @@ const NewsComponent = () => {
     const [error, setError] = useState(null); // Error state
     const [category, setCategory] = useState("sports"); // Default category
     const [dateTime, setDateTime] = useState({ date: "", time: "" }); // Date & Time state
+    const [isSidebarOpen, setIsSidebarOpen] = useState(false); // Sidebar open/close state
+    const [headline, setHeadline] = useState(""); // Headline for marquee
 
     // Fetch news based on the selected category
     useEffect(() => {
@@ -20,11 +22,23 @@ const NewsComponent = () => {
                 setNews(response.data); // Set the news data
                 setLoading(false); // Stop the loading spinner
             })
-            .catch((error) => {
+            .catch(() => {
                 setError("Error fetching news data!"); // Set error message
                 setLoading(false);
             });
     }, [category]); // Dependency on 'category'
+
+    // Fetch headline for the marquee
+    useEffect(() => {
+        axios
+            .get("https://news-portal-suby.onrender.com/headline/getHeadline")
+            .then((response) => {
+                setHeadline(response.data.title); // Set headline text
+            })
+            .catch(() => {
+                setError("Error fetching headline!"); // Handle error if fetching fails
+            });
+    }, []); // Fetch only once when the component mounts
 
     // Update date and time dynamically
     useEffect(() => {
@@ -43,6 +57,7 @@ const NewsComponent = () => {
     // Handle category selection
     const handleCategoryClick = (selectedCategory) => {
         setCategory(selectedCategory.toLowerCase()); // Update category state
+        setIsSidebarOpen(false); // Close sidebar after selecting a category
     };
 
     // Function to truncate description after 40 words
@@ -66,8 +81,24 @@ const NewsComponent = () => {
                 <div className="logo">Logo</div>
                 <div className="headlines">Headlines</div>
             </header>
+            {/* Marquee for breaking news */}
+            <div className="news-marquee">
+                <marquee behavior="scroll" direction="left">
+                    Breaking News: {headline ? headline : "Loading latest headline..."}
+                </marquee>
+            </div>
             <div className="main-content">
-                <aside className="sidebar">
+                {/* Hamburger Icon */}
+                <div
+                    className={`hamburger ${isSidebarOpen ? "open" : ""}`}
+                    onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                {/* Sidebar */}
+                <aside className={`sidebar ${isSidebarOpen ? "open" : ""}`}>
                     <ul>
                         <li
                             className={category === "sports" ? "active-category" : ""}
@@ -82,10 +113,16 @@ const NewsComponent = () => {
                             Technology
                         </li>
                         <li
-                            className={category === "business" ? "active-category" : ""}
-                            onClick={() => handleCategoryClick("Business")}
+                            className={category === "politics" ? "active-category" : ""}
+                            onClick={() => handleCategoryClick("Politics")}
                         >
-                            Business
+                            Politics
+                        </li>
+                        <li
+                            className={category === "education" ? "active-category" : ""}
+                            onClick={() => handleCategoryClick("Education")}
+                        >
+                            Education
                         </li>
                     </ul>
                 </aside>
