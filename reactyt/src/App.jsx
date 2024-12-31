@@ -120,3 +120,5 @@ const NewsComponent = () => {
 };
 
 export default NewsComponent;
+
+
