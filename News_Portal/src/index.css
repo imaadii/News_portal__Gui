@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.globe{
+  width: 50px;
+  height: 50px;
+  background-image: url("https://th.bing.com/th/id/R.235ddbd41d690c0f18d17f9931525b98?rik=l8ER60Z0pKPSRQ&riu=http%3a%2f%2fclipart-library.com%2fimages%2fdT9rn7gkc.jpg&ehk=jBpufD5W0S0zMaF45XVKa%2byFNvq623cz2qah4cF3S%2bQ%3d&risl=&pid=ImgRaw&r=0");
+  background-size: contain;
+  background-position: center;
+  border-radius: 50%;
+}
