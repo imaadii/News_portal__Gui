@@ -10,7 +10,9 @@ const CategoryPage = () => {
   useEffect(() => {
     const fetchCategoryNews = async () => {
       try {
-        const response = await fetch(`https://news-portal-suby.onrender.com/api/news?category=${category}`);
+        const response = await fetch(
+          `https://news-portal-suby.onrender.com/api/news?category=${category}`
+        );
         if (!response.ok) {
           throw new Error("Failed to fetch news");
         }
@@ -29,7 +31,9 @@ const CategoryPage = () => {
   // Function to truncate description to 50 words
   const truncateDescription = (description, wordLimit = 50) => {
     const words = description.split(" ");
-    return words.length > wordLimit ? words.slice(0, wordLimit).join(" ") + "..." : description;
+    return words.length > wordLimit
+      ? words.slice(0, wordLimit).join(" ") + "..."
+      : description;
   };
 
   if (loading) return <div>Loading...</div>;
@@ -37,17 +41,24 @@ const CategoryPage = () => {
 
   return (
     <div className="relative w-4/5 h-full m-auto">
-      <h2 className="text-3xl font-bold text-center mb-4">{category.toUpperCase()} News</h2>
+      <h2 className="text-3xl font-bold text-center mb-4">
+        {category.toUpperCase()} News
+      </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {news.map((article) => (
-          <div key={article.article_id} className="flex flex-col justify-center border p-4">
+          <div
+            key={article.article_id}
+            className="flex flex-col justify-center border p-4"
+          >
             <img
               className="w-full h-48 object-cover"
               src={article.image_url || "https://via.placeholder.com/150"}
               alt={article.title}
             />
             <h3 className="text-xl font-serif mt-4">{article.title}</h3>
-            <p className="text-sm mt-2">{truncateDescription(article.description)}</p>
+            <p className="text-sm mt-2">
+              {truncateDescription(article.description)}
+            </p>
             <a
               href={article.link}
               target="_blank"
