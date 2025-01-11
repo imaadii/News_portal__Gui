@@ -16,10 +16,6 @@ const Navbar = () => {
       <Link to="/news/tech" className="text-black no-underline"><h4 className=" hover:text-blue-700 text-base font-normal">Tech</h4></Link>
       <Link to="/news/research" className="text-black no-underline"><h4 className=" hover:text-blue-700 text-base font-normal">Research</h4></Link>
       <Link to="/news/video" className="text-black no-underline"><h4 className=" hover:text-blue-700 text-base font-normal">Video</h4></Link>
-      {/* <Link to="/login" className="text-black no-underline"><h4 className=" hover:text-blue-800 text-base font-normal">Login</h4></Link>
-      <button className="bg-blue-700 px-3 py-2 font-medium text-white rounded absolute right-2 top-1 group hover:bg-white hover:text-blue-700 transition-colors duration-300">
-        <span className="group-hover:text-blue-700">SUBSCRIBE</span>
-      </button> */}
     </div>
   );
 };
