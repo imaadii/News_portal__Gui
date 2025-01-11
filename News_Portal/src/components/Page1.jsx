@@ -6,12 +6,12 @@ const Sidebar = ({ isOpen }) => {
     <div
       className={`bg-gray-800 text-white transform ${
         isOpen ? "translate-x-0" : "-translate-x-full"
-      } transition-transform duration-300 w-64 h-[calc(100vh-64px)]`}
+      } transition-transform duration-300 w-64 h-[calc(100vh-64px)] `}
     >
-      <nav className="mt-6">
+      <nav className="mt-6 ">
         <ul className="flex flex-col space-y-4 px-4">
           <li>
-            <a href="#" className="hover:text-blue-400">
+            <a href="/category" className="hover:text-blue-400">
               Sports
             </a>
           </li>
@@ -85,15 +85,15 @@ const Page1 = () => {
   return (
     <div className="flex flex-col h-screen">
       {/* Header */}
-      <header className="bg-gray-900 text-white p-4">
-        <div className="flex justify-between items-center">
-          <h1 className="text-xl font-bold">CodingNepal</h1>
+      <header className=" text-white p-4 relative">
+        <div className="flex justify-between items-center absolute left-4 bottom-0">
+          {/* <h1 className="text-xl font-bold">CodingNepal</h1> */}
           <button
             onClick={toggleSidebar}
-            className="px-3 py-2 text-white bg-gray-700 rounded focus:outline-none"
+            className="px-3 py-2 text-gray-800 rounded focus:outline-none"
           >
             {/* Properly aligned three parallel lines */}
-            <span className="text-2xl">&#9776;</span>
+            <span className="text-3xl">&#9776;</span>
           </button>
         </div>
       </header>

@@ -28,7 +28,7 @@ const WeatherAndDate = () => {
   }, []);
 
   return (
-    <div className="weather-date-section flex justify-between items-center p-4 ">
+    <div className="weather-date-section flex justify-between items-center p-4 py-0">
       {/* Date Section */}
       <div className="date-section text-gray-700 text-lg">
         <span>{date}</span>
