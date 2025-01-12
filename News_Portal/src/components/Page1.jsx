@@ -6,9 +6,9 @@ const Sidebar = ({ isOpen }) => {
     <div
       className={`bg-gray-800 text-white transform ${
         isOpen ? "translate-x-0" : "-translate-x-full"
-      } transition-transform duration-300 w-64 h-[calc(100vh-64px)]`}
+      } transition-transform duration-300 w-48 h-[calc(100vh-64px)]`}
     >
-      <nav className="mt-6">
+      <nav className="mt-6 border-b border-gray-600">
         <ul className="flex flex-col space-y-4 px-4">
           <li>
             <a href="#" className="hover:text-blue-400">
@@ -40,6 +40,7 @@ const Sidebar = ({ isOpen }) => {
     </div>
   );
 };
+
 
 // Page1 Component
 const Page1 = () => {
@@ -87,7 +88,7 @@ const Page1 = () => {
       {/* Header */}
       <header className="bg-gray-900 text-white p-4">
         <div className="flex justify-between items-center">
-          <h1 className="text-xl font-bold">CodingNepal</h1>
+          <h1 className="text-xl font-bold"></h1>
           <button
             onClick={toggleSidebar}
             className="px-3 py-2 text-white bg-gray-700 rounded focus:outline-none"

@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 const WeatherAndDate = () => {
   const [date, setDate] = useState("");
   const [weather, setWeather] = useState({ description: "Loading...", temp: "..." });
+  const [icon, setIcon] = useState("");
+  const [cityName, setCityName] = useState(""); // State to store the city name
 
   useEffect(() => {
     // Update the date
@@ -12,23 +14,37 @@ const WeatherAndDate = () => {
 
     // Fetch weather data (example using OpenWeatherMap API)
     const fetchWeather = async () => {
-      const apiKey = "your-api-key"; // Replace with your API key
-      const city = "New York"; // Replace with desired city
+      const apiKey = "a6817a264f29950cd107b04c8d4d614a"; // Replace with your API key
+      const city = "Gwalior"; // Replace with desired city
       const response = await fetch(
         `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`
       );
       const data = await response.json();
-      setWeather({
-        description: data.weather[0].description,
-        temp: `${data.main.temp}°C`,
-      });
+
+      if (data.cod === 200) {
+        // Extract the weather information
+        const weatherData = data.weather[0];
+        const mainData = data.main;
+
+        setWeather({
+          description: weatherData.description,
+          temp: `${mainData.temp}°C`, // Ensure the temperature is set correctly
+        });
+        setIcon(weatherData.icon); // Set the weather icon code
+        setCityName(data.name); // Set the city name
+      } else {
+        setWeather({
+          description: "Error fetching weather data.",
+          temp: "",
+        });
+      }
     };
 
     fetchWeather();
   }, []);
 
   return (
-    <div className="weather-date-section flex justify-between items-center p-4 ">
+    <div className="weather-date-section flex justify-between items-center p-4">
       {/* Date Section */}
       <div className="date-section text-gray-700 text-lg">
         <span>{date}</span>
@@ -37,12 +53,12 @@ const WeatherAndDate = () => {
       {/* Weather Section */}
       <div className="weather-section text-gray-700 text-lg flex items-center">
         <img
-          src={`https://openweathermap.org/img/wn/01d.png`} // Replace with API icon URL dynamically
+          src={`https://openweathermap.org/img/wn/${icon}.png`} // Dynamic weather icon based on data
           alt="Weather Icon"
           className="weather-icon w-8 h-8 mr-2"
         />
         <span>
-          {weather.description}, {weather.temp}
+          {cityName}, {weather.description}, {weather.temp}
         </span>
       </div>
     </div>
