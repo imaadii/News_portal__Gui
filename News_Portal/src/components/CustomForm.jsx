@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Header from "./Header";
 import Navbar from "./Navbar";
+import AdminNavbar from "./AdminNavbar";
 
 function CustomForm() {
   const [category, setCategory] = useState("");
@@ -45,7 +46,7 @@ function CustomForm() {
   return (
     <>
       <Header />
-      <Navbar />
+      <AdminNavbar />
       <div
         style={{
           fontFamily: "Arial, sans-serif",

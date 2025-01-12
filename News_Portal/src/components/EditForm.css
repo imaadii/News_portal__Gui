@@ -1,26 +1,26 @@
 /* Style the EditForm container */
 .edit-form-container {
-    max-width: 600px;
-    margin: 30px auto;
-    padding: 20px;
+    max-width: 800px; /* Increased width */
+    margin: 50px auto; /* More spacing from top */
+    padding: 40px; /* Larger padding for a spacious look */
     background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 12px; /* Slightly rounded corners */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Enhanced shadow for a bold effect */
   }
   
   /* Heading Style */
   .edit-form-container h2 {
     text-align: center;
-    font-size: 1.8rem;
+    font-size: 2.5rem; /* Larger font size */
     color: #333;
-    margin-bottom: 20px;
+    margin-bottom: 30px; /* More space below the heading */
   }
   
   /* Form Style */
   .edit-form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 25px; /* More spacing between elements */
   }
   
   /* Form Group Style */
@@ -32,40 +32,49 @@
   /* Label Style */
   .form-group label {
     font-weight: bold;
-    color: #555;
-    margin-bottom: 5px;
+    color: #444;
+    font-size: 1.2rem; /* Larger label font size */
+    margin-bottom: 10px;
   }
   
   /* Input and Textarea Styles */
   .form-group input,
   .form-group textarea {
-    padding: 10px;
-    font-size: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    transition: border 0.3s;
+    padding: 15px; /* Increased padding */
+    font-size: 1.2rem; /* Larger input font size */
+    border: 2px solid #ddd; /* Thicker border for emphasis */
+    border-radius: 6px; /* Slightly rounded edges */
+    transition: border 0.3s, box-shadow 0.3s;
   }
   
   .form-group input:focus,
   .form-group textarea:focus {
     border-color: #4a90e2;
     outline: none;
+    box-shadow: 0 0 8px rgba(74, 144, 226, 0.5); /* Subtle glow on focus */
+  }
+  
+  /* Textarea Specific Style */
+  .form-group textarea {
+    min-height: 120px; /* Taller textarea */
+    resize: vertical; /* Allow vertical resizing */
   }
   
   /* Button Styles */
   .form-actions {
     display: flex;
     justify-content: space-between;
-    gap: 15px;
+    gap: 20px; /* More space between buttons */
   }
   
   .btn {
-    padding: 10px 20px;
-    font-size: 1rem;
-    border-radius: 4px;
+    flex: 1; /* Buttons take equal space */
+    padding: 15px 25px; /* Larger padding for bigger buttons */
+    font-size: 1.2rem; /* Larger button text */
+    border-radius: 6px; /* Rounded corners */
     cursor: pointer;
     border: none;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.2s;
   }
   
   .save-btn {
@@ -75,6 +84,7 @@
   
   .save-btn:hover {
     background-color: #45a049;
+    transform: translateY(-2px); /* Slight lift on hover */
   }
   
   .cancel-btn {
@@ -84,5 +94,32 @@
   
   .cancel-btn:hover {
     background-color: #e53935;
+    transform: translateY(-2px); /* Slight lift on hover */
+  }
+  
+  /* Responsive Design for Smaller Screens */
+  @media (max-width: 768px) {
+    .edit-form-container {
+      padding: 20px;
+    }
+  
+    .edit-form-container h2 {
+      font-size: 2rem;
+    }
+  
+    .form-group label {
+      font-size: 1rem;
+    }
+  
+    .form-group input,
+    .form-group textarea {
+      font-size: 1rem;
+      padding: 12px;
+    }
+  
+    .btn {
+      font-size: 1rem;
+      padding: 12px 20px;
+    }
   }
   

@@ -3,6 +3,7 @@ import "./Gauri.css";
 import Header from "./components/Header";
 import Navbar from "./components/Navbar";
 import EditForm from "./components/EditForm";
+import AdminNavbar from "./components/AdminNavbar";
 
 const NewsGrid = () => {
   const [newsData, setNewsData] = useState([]);
@@ -109,7 +110,7 @@ const NewsGrid = () => {
   ) : (
     <>
       <Header />
-      <Navbar />
+      <AdminNavbar />
       <div className="news-grid-container">
         <table className="news-table">
           <thead>

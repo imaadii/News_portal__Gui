@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"; // Import Link from react-router-dom
 const Navbar = () => {
   return (
     <div className="flex gap-4 justify-around items-center py-2 bg-gray-300 pr-32 relative">
-      <Link to="/news/home"><h4 className="hover:text-blue-700 text-lg">Home</h4></Link>
+      <Link to="/"><h4 className="hover:text-blue-700 text-lg">Home</h4></Link>
       <Link to="/news/world"><h4 className="hover:text-blue-700 text-lg">World</h4></Link>
       <Link to="/news/india"><h4 className="hover:text-blue-700 text-lg">India</h4></Link>
       <Link to="/news/politics"><h4 className="hover:text-blue-700 text-lg">Politics</h4></Link>

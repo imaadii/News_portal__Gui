@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./Header";
 import Navbar from "./Navbar";
 import "./EditForm.css"; // Importing the external CSS file
+import AdminNavbar from "./AdminNavbar";
 
 const EditForm = ({ data, onSubmit, onCancel }) => {
   const [editData, setEditData] = React.useState(data);
@@ -9,7 +10,7 @@ const EditForm = ({ data, onSubmit, onCancel }) => {
   return (
     <>
       <Header />
-      <Navbar />
+      <AdminNavbar />
       <div className="edit-form-container">
         <h2>Edit News Item</h2>
         <form
