@@ -15,12 +15,12 @@ const Topbar = () => {
       <div className="flex items-center justify-between mt-1 mb-1">
         <WeatherAndDate />
         <div className="flex items-center">
-          <button className="bg-blue-700 px-3 py-2 font-medium text-white rounded group hover:bg-white hover:text-blue-700 transition-colors duration-300">
+          {/* <button className="bg-blue-700 px-3 py-2 font-medium text-white rounded group hover:bg-white hover:text-blue-700 transition-colors duration-300">
             <span className="group-hover:text-blue-700">SUBSCRIBE</span>
           </button>
           <Link to="/login" className="text-black no-underline px-3 mt-2">
             <h4 className=" hover:text-blue-800 text-lg font-normal">Login</h4>
-          </Link>
+          </Link> */}
 
           <div className="flex justify-center items-center space-x-2 px-1">
             {/* Facebook Icon */}
