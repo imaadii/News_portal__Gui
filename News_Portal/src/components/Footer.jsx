@@ -55,7 +55,8 @@ const Footer = () => {
             <li><a href="#">ETIMES</a></li>
             <li><a href="#">BOLLYWOOD NEWS</a></li>
             <li><a href="#">TV</a></li>
-            <li><a href="#">LIFESTYLES</a></li>
+            <li><a  href="/c"><button type="submit"  className="bg-blue-700 px-3 py-2 font-medium text-white rounded group hover:bg-white hover:text-blue-700 transition-colors duration-300">Contact us</button>
+            </a></li>
           </ul>
         </div>
       </footer>
@@ -79,8 +80,9 @@ const Footer = () => {
             <li><a href="#">CA Supply Chain Act</a></li>
             <li><a href="#">Accessibility</a></li>
             <li><a href="#">Cookie Preferences</a></li>
-            <li><a href="#">© 2024 Starbucks Coffee Company. All rights reserved.</a></li>
+            <li><a href="#">© 2024 News website. All rights reserved.</a></li>
           </ul>
+          
         </div>
       </footer>
     </>

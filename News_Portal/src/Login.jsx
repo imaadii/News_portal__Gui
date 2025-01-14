@@ -87,18 +87,14 @@ const Login = () => {
                                     required
                                 />
                             </div>
-                            <button type="submit" className="btn btn-primary w-100">Login</button>
+                            <button type="submit"  className="bg-blue-700 px-3 py-2 font-medium text-white rounded group hover:bg-white hover:text-blue-700 transition-colors duration-300">Login</button>
                         </form>
                         {message && <div className="alert mt-3 alert-success text-center">{message}</div>}
                         {error && <div className="alert mt-3 alert-danger text-center">{error}</div>}
                     </div>
                 </div>
-                <h4 className="text-center mt-5">
-                    Don't have an account?{" "}
-                    <a href="/signup" className="text-primary">
-                        Signup
-                    </a>
-                </h4>
+              
+                
             </div>
         </>
     );

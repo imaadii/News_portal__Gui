@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <div className="flex justify-evenly items-center py-2 bg-gray-200 pr-32">
       <SidePanel />
-      <Link to="/news/home" className="text-black no-underline"><h4 className=" hover:text-blue-700 text-base font-normal">Home</h4></Link>
+      <Link to="/" className="text-black no-underline"><h4 className=" hover:text-blue-700 text-base font-normal">Home</h4></Link>
       <Link to="/news/world" className="text-black no-underline"><h4 className=" hover:text-blue-700 text-base font-normal">World</h4></Link>
       <Link to="/news/india" className="text-black no-underline"><h4 className=" hover:text-blue-700 text-base font-normal">India</h4></Link>
       <Link to="/news/politics" className="text-black no-underline"><h4 className=" hover:text-blue-700 text-base font-normal">Politics</h4></Link>
