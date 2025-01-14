@@ -70,7 +70,7 @@ const Footer = () => {
         <i className="bx bxl-twitter"></i>
       </div>
 
-      <footer className="privacy-footer">
+      {/* <footer className="privacy-footer">
         <div className="footer-content">
           <h4>Privacy Note</h4>
           <ul>
@@ -84,7 +84,7 @@ const Footer = () => {
           </ul>
           
         </div>
-      </footer>
+      </footer> */}
     </>
   );
 };
