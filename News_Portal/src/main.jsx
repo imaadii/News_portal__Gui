@@ -20,6 +20,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/login" element={<Login />} />
         <Route path="/category" element={<NewsComponent />} />
         <Route path="/news/:category" element={<CategoryPage />} />{" "}
+        <Route path="/categoryForm" element={<CustomForm />} />
+        <Route path="/newsGrid" element={<NewsGrid />} />
         {/* Category News Page */}
       </Routes>
     </BrowserRouter>
