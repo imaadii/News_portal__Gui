@@ -1,10 +1,13 @@
 .footer {
-    width: 100%;
-    padding: 40px 3%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2rem;
-    background-color: #76a8da;
+  width: 100%;
+  padding: 40px 3%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  background-color: #040404;
+  font-style: inherit;
+  font-family: emoji;
+  font-size: larger;
   }
   
   .footer-content {
@@ -14,7 +17,7 @@
   }
   
   .footer-content h4 {
-    color: black;
+    color: rgb(248, 243, 243);
     font-size: 18px;
     margin-bottom: 1rem;
   }
@@ -26,7 +29,7 @@
   }
   
   .footer-content li a {
-    color: black;
+    color: rgb(250, 246, 246);
     font-size: 14px;
     text-decoration: none;
     transition: color 0.3s;
