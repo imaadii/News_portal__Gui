@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import Navbar from "./components/Navbar";
 import Page1 from "./components/Page1";
 import Page2 from "./components/Page2";
+<<<<<<< HEAD
 import Slideshow from "./Slideshow";
 import Footer from "./Footer";
 const App = () => {
@@ -26,6 +27,24 @@ const App = () => {
         <Footer/>
         </>
     );
+=======
+import Footer from "./components/Footer";
+
+const App = () => {
+  return (
+    <>
+      <div>
+        <div className="w-5/6 m-auto relative h-full">
+          <Header />
+          <Navbar />
+          <Page1 />
+          <Page2 />
+        </div>
+        <Footer />
+      </div>
+    </>
+  );
+>>>>>>> a6b6c309b56bf3a73d3bcaa33649a5b32778e660
 };
 
 export default App;

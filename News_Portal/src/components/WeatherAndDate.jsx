@@ -44,7 +44,7 @@ const WeatherAndDate = () => {
   }, []);
 
   return (
-    <div className="weather-date-section flex justify-between items-center p-4">
+    <div className="weather-date-section flex justify-between items-center p-4 ">
       {/* Date Section */}
       <div className="date-section text-gray-700 text-lg">
         <span>{date}</span>
@@ -65,4 +65,4 @@ const WeatherAndDate = () => {
   );
 };
 
-export default WeatherAndDate;
+export default WeatherAndDate;
