@@ -3,9 +3,9 @@ import React, { useEffect, useState } from "react";
 const Page1 = () => {
   const [news, setNews] = useState([]);
   const [error, setError] = useState(null);
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  // const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-  const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
+  // const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
 
   useEffect(() => {
     const fetchNews = async () => {
@@ -41,8 +41,6 @@ const Page1 = () => {
   }
 
   return (
-    <div className="flex flex-col h-screen">
-      {/* Main Layout */}
       <div className="flex flex-1">
         {/* Main Content */}
         <div className="flex-1 p-4 overflow-y-auto">
@@ -88,7 +86,6 @@ const Page1 = () => {
           ))}
         </div>
       </div>
-    </div>
   );
 };
 
