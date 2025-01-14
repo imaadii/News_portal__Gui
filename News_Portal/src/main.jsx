@@ -11,6 +11,7 @@ import CategoryPage from "./CategoryPage"; // Import the CategoryPage component
 import CustomForm from "./components/CustomForm";
 import Page1 from "./components/Page1";
 import "bootstrap/dist/css/bootstrap.min.css";
+import NewsGrid from "./NewsGrid";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
