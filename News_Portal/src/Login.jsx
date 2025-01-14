@@ -93,12 +93,7 @@ const Login = () => {
                         {error && <div className="alert mt-3 alert-danger text-center">{error}</div>}
                     </div>
                 </div>
-                <h4 className="text-center mt-5">
-                    Don't have an account?{" "}
-                    <a href="/signup" className="text-primary">
-                        Signup
-                    </a>
-                </h4>
+               
             </div>
         </>
     );
