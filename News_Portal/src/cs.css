@@ -98,4 +98,26 @@
   .error {
     color: #e63946; /* Red for error */
   }
+  .filter-section {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+  }
+  
+  .filter-section label {
+    margin-right: 20px;
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .filter-section input[type="radio"] {
+    margin-right: 5px;
+    cursor: pointer;
+  }
   
