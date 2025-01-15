@@ -14,6 +14,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import NewsGrid from "./NewsGrid";
 import Contact from "./contact";
 import ContactUsGrid from "./ContactUsGrid";
+import Feedback from "./Feedback";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -28,7 +29,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/newsGrid" element={<NewsGrid />} />
         <Route path="/c" element={<Contact />} />
         <Route path="/cg" element={<ContactUsGrid />} />
-
+        <Route path="/f" element={<Feedback />} />
         {/* Category News Page */}
       </Routes>
     </BrowserRouter>
