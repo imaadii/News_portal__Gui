@@ -1,0 +1,101 @@
+/* General container styles */
+.contact-grid-container {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 80%;
+    background-color: #f8f9fa; /* Light gray background */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Table styles */
+  .contact-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .contact-table th,
+  .contact-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .contact-table th {
+    background-color: #1d3557; /* Dark blue for header */
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .contact-table td {
+    color: #333;
+    font-size: 14px;
+  }
+  
+  .contact-table tr:hover {
+    background-color: #f1f1f1; /* Light gray on hover */
+  }
+  
+  .contact-table tr:nth-child(even) {
+    background-color: #f9f9f9; /* Alternate row color */
+  }
+  
+  /* Pagination styles */
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+  }
+  
+  .pagination button {
+    padding: 8px 16px;
+    margin: 0 5px;
+    border: 1px solid #ddd;
+    background-color: #f5f5f5;
+    font-size: 14px;
+    color: #333;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .pagination button:hover {
+    background-color: #1d3557; /* Dark blue */
+    color: #fff;
+    transform: scale(1.05);
+  }
+  
+  .pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .pagination span {
+    margin: 0 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Loading and error messages */
+  .loading,
+  .error {
+    text-align: center;
+    font-size: 18px;
+    color: #1d3557; /* Dark blue */
+    font-weight: bold;
+    margin: 20px 0;
+  }
+  
+  .error {
+    color: #e63946; /* Red for error */
+  }
+  

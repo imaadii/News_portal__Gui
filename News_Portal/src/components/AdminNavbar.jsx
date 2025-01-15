@@ -6,7 +6,7 @@ const AdminNavbar = () => {
     <div className="flex gap-4 justify-around items-center py-2 bg-gray-300 pr-32 relative">
       <Link to="/newsGrid"><h4 className="hover:text-blue-700 text-lg">Home</h4></Link>
       <Link to="/categoryForm"><h4 className="hover:text-blue-700 text-lg">Custom Form</h4></Link>
-
+      <Link to="/cg"><h4 className="hover:text-blue-700 text-lg">Contact Details</h4></Link>
       <Link to="/Signup"><h4 className="hover:text-blue-800 text-lg">SignUp</h4></Link>
 
       <Link to="/login"><h4 className="hover:text-blue-800 text-lg">Logout</h4></Link>

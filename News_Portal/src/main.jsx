@@ -13,6 +13,7 @@ import Page1 from "./components/Page1";
 import "bootstrap/dist/css/bootstrap.min.css";
 import NewsGrid from "./NewsGrid";
 import Contact from "./contact";
+import ContactUsGrid from "./ContactUsGrid";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -26,6 +27,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/categoryForm" element={<CustomForm />} />
         <Route path="/newsGrid" element={<NewsGrid />} />
         <Route path="/c" element={<Contact />} />
+        <Route path="/cg" element={<ContactUsGrid />} />
+
         {/* Category News Page */}
       </Routes>
     </BrowserRouter>
