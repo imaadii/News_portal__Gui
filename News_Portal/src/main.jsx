@@ -15,6 +15,7 @@ import NewsGrid from "./NewsGrid";
 import Contact from "./contact";
 import ContactUsGrid from "./ContactUsGrid";
 import Feedback from "./Feedback";
+import FeedbackGrid from "./FeedbackGrid";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -30,6 +31,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/c" element={<Contact />} />
         <Route path="/cg" element={<ContactUsGrid />} />
         <Route path="/f" element={<Feedback />} />
+        <Route path="/fb" element={<FeedbackGrid />} />
         {/* Category News Page */}
       </Routes>
     </BrowserRouter>

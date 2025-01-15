@@ -7,6 +7,8 @@ const AdminNavbar = () => {
       <Link to="/newsGrid"><h4 className="hover:text-blue-700 text-lg">Home</h4></Link>
       <Link to="/categoryForm"><h4 className="hover:text-blue-700 text-lg">Custom Form</h4></Link>
       <Link to="/cg"><h4 className="hover:text-blue-700 text-lg">Contact Details</h4></Link>
+      <Link to="/fb"><h4 className="hover:text-blue-700 text-lg">Feedback Details</h4></Link>
+
       <Link to="/Signup"><h4 className="hover:text-blue-800 text-lg">SignUp</h4></Link>
 
       <Link to="/login"><h4 className="hover:text-blue-800 text-lg">Logout</h4></Link>
