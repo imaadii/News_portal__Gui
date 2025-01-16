@@ -1,12 +1,8 @@
 import React, { useEffect, useState } from "react";
 
-// Page1 Component
 const Page1 = () => {
   const [news, setNews] = useState([]);
   const [error, setError] = useState(null);
-  // const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
-  // const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
 
   useEffect(() => {
     const fetchNews = async () => {
@@ -27,7 +23,6 @@ const Page1 = () => {
     fetchNews();
   }, []);
 
-  // Group news by category
   const groupedNews = news.reduce((acc, article) => {
     const category = article.category || "Uncategorized";
     if (!acc[category]) {
@@ -38,7 +33,7 @@ const Page1 = () => {
   }, {});
 
   if (error) {
-    return <div className="text-red-500">Error: {error}</div>;
+    return <div className="text-red-500 text-center py-4">Error: {error}</div>;
   }
 
   return (
@@ -70,7 +65,8 @@ const Page1 = () => {
                     <div className="p-4">
                       <h3 className="text-lg font-semibold">{article.title}</h3>
                       <p className="text-sm text-gray-700 mt-2">
-                      {article.description?.slice(0, 100) || "No description available."}...                      </p>
+                        {article.description.slice(0, 100)}...
+                      </p>
                       <a
                         href={article.link}
                         target="_blank"
@@ -90,5 +86,4 @@ const Page1 = () => {
   );
 };
 
-export default Page1;
-
+export default Page1;
