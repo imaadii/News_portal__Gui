@@ -7,6 +7,7 @@ const Footer = () => {
       <footer className="footer">
         <div className="footer-content">
           <h4>Top News</h4>
+         
           <ul>
             <li><a href="#">Breaking News Hindi</a></li>
             <li><a href="#">Top News Hindi</a></li>
@@ -70,10 +71,11 @@ const Footer = () => {
         <i className="bx bxl-twitter"></i>
       </div>
 
-      {/* <footer className="privacy-footer">
+      <footer className="privacy-footer">
         <div className="footer-content">
           <h4>Privacy Note</h4>
           <ul>
+          
             <li><a href="#">Consumer Health Privacy Notice</a></li>
             <li><a href="#">Terms of Use</a></li>
             <li><a href="#">Do Not Share My Personal Information</a></li>
@@ -84,7 +86,7 @@ const Footer = () => {
           </ul>
           
         </div>
-      </footer> */}
+      </footer>
     </>
   );
 };
