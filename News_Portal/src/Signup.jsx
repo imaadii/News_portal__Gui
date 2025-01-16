@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
+import AdminNavbar from "./components/AdminNavbar";
 
 const Signup = () => {
     const [formData, setFormData] = useState({
@@ -64,7 +65,7 @@ const Signup = () => {
     return (
         <>
             <Header />
-            <Navbar />
+            <AdminNavbar />
             <div className="col-sm-4 offset-sm-4 mt-5">
                 <h2 className="text-center mb-4">Signup</h2>
                 <form className="p-4 border rounded" onSubmit={handleSubmit}>
