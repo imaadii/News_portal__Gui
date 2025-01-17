@@ -17,6 +17,9 @@ import ContactUsGrid from "./ContactUsGrid";
 import Feedback from "./Feedback";
 import FeedbackGrid from "./FeedbackGrid";
 import AboutPage from "./AboutPage";
+import TermsAndConditions from "./TermsAndConditions";
+import CustomPage from"./CustomPage";
+import PrivacyPolicy from "./PrivacyPolicy";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -29,11 +32,14 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/news/:category" element={<CategoryPage />} />{" "}
         <Route path="/categoryForm" element={<CustomForm />} />
         <Route path="/newsGrid" element={<NewsGrid />} />
-        <Route path="/c" element={<Contact />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="/cg" element={<ContactUsGrid />} />
-        <Route path="/f" element={<Feedback />} />
+        <Route path="/feedback" element={<Feedback />} />
         <Route path="/fb" element={<FeedbackGrid />} />
-        <Route path="/a" element={<AboutPage />} />
+        <Route path="/aboutPage" element={<AboutPage />} />
+        <Route path="/cp" element={<CustomPage />} />
+        <Route path="/TermsAndCondition" element={<TermsAndConditions />} />
+        <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
 
         {/* Category News Page */}
       </Routes>
