@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 // import "bootstrap-icons/font/bootstrap-icons.css";
 import WeatherAndDate from "./WeatherAndDate";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 // import { CiFacebook } from "react-icons/ci";
 // import { FiInstagram } from "react-icons/fi";
 // import { FiYoutube } from "react-icons/fi";
@@ -12,7 +12,7 @@ import { FaFacebook, FaYoutube, FaInstagram, FaTwitter } from "react-icons/fa";
 const Topbar = () => {
   return (
     <>
-      <div className="flex items-center justify-between mt-1 mb-1">
+      <div className="h-12 flex items-center justify-between border-b border-gray-300">
         <WeatherAndDate />
         <div className="flex items-center">
           {/* <button className="bg-blue-700 px-3 py-2 font-medium text-white rounded group hover:bg-white hover:text-blue-700 transition-colors duration-300">
@@ -61,7 +61,7 @@ const Topbar = () => {
           </div>
         </div>
       </div>
-      <hr className="border-gray-500 m-0" />
+      {/* <hr className="border-gray-500 m-0" /> */}
     </>
   );
 };

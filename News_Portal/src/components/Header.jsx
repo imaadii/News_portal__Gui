@@ -8,7 +8,7 @@ const Header = () => {
     {/* <WeatherAndDate /> */}
     <Topbar />
       <div>
-        <div className="logo flex justify-center py-2 mt-2">
+        <div className="logo flex justify-center py-2 mt-4">
           <h1 className="md:text-4xl lg:text-6xl">
             The Gl<div className="inline-block globe animate-spin"></div>bal{' '}
             <span className="font-semibold text-blue-800 font-serif">WITNESS</span>
