@@ -1,18 +1,13 @@
 import React from "react";
-import Navbar from "./components/Navbar";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
 
 const AboutPage = () => {
   return (
     <>
-      <Header />
-      <Navbar />
-      <div className="bg-gray-100 font-sans">
+      <div className="font-sans border-t border-gray-300">
         {/* Header Section */}
-        <header className="bg-white py-4 shadow-md">
+        <header className="bg-white py-4 shadow-sm">
           <div className="container mx-auto text-center">
-            <h1 className="text-4xl font-bold border-b-4 border-blue-500 inline-block pb-2">
+            <h1 className="text-4xl font-bold font-serif inline-block ">
               About Us
             </h1>
           </div>
@@ -32,14 +27,29 @@ const AboutPage = () => {
             <div>
               <h2 className="text-2xl font-bold mb-4">Who We Are?</h2>
               <p className="text-gray-600 leading-relaxed mb-6">
-                At <strong style={{ color: "rgb(30, 30, 178)" }}>The Global Witness</strong>, we are a dedicated team of journalists, editors, and storytellers committed to delivering accurate, transparent, and impactful news to our global audience. Our mission is simple yet profound: to inform, inspire, and empower through stories that matter.
+                At{" "}
+                <strong style={{ color: "rgb(30, 30, 178)" }}>
+                  The Global Witness
+                </strong>
+                , we are a dedicated team of journalists, editors, and
+                storytellers committed to delivering accurate, transparent, and
+                impactful news to our global audience. Our mission is simple yet
+                profound: to inform, inspire, and empower through stories that
+                matter.
                 <br />
                 <br />
                 In a world inundated with misinformation,{" "}
-                <strong style={{ color: "rgb(30, 30, 178)" }}>The Global Witness</strong> stands as a beacon of truth and reliability. We prioritize integrity, fairness, and inclusivity in our reporting, ensuring that every voice is heard, and every story is told with compassion and accuracy.
+                <strong style={{ color: "rgb(30, 30, 178)" }}>
+                  The Global Witness
+                </strong>{" "}
+                stands as a beacon of truth and reliability. We prioritize
+                integrity, fairness, and inclusivity in our reporting, ensuring
+                that every voice is heard, and every story is told with
+                compassion and accuracy.
                 <br />
                 <br />
-                Join us on this journey as we strive to make a difference, one story at a time.
+                Join us on this journey as we strive to make a difference, one
+                story at a time.
               </p>
             </div>
           </div>
@@ -51,13 +61,31 @@ const AboutPage = () => {
             <div>
               <h2 className="text-2xl font-bold mb-4">Our Standards</h2>
               <p className="text-gray-600 leading-relaxed mb-6">
-                At <strong style={{ color: "rgb(30, 30, 178)" }}>The Global Witness</strong>, we are committed to delivering accurate, unbiased, and transparent journalism that upholds the highest standards of integrity.
+                At{" "}
+                <strong style={{ color: "rgb(30, 30, 178)" }}>
+                  The Global Witness
+                </strong>
+                , we are committed to delivering accurate, unbiased, and
+                transparent journalism that upholds the highest standards of
+                integrity.
                 <br />
                 <br />
-                We believe in the power of journalism to spark meaningful change. Every story we publish is thoroughly researched, fact-checked, and presented in a balanced and ethical manner. Our mission is to shed light on the issues that matter most—holding the powerful to account, amplifying the voices of the marginalized, and ensuring the public remains informed about the challenges and triumphs shaping our global community.
+                We believe in the power of journalism to spark meaningful
+                change. Every story we publish is thoroughly researched,
+                fact-checked, and presented in a balanced and ethical manner.
+                Our mission is to shed light on the issues that matter
+                most—holding the powerful to account, amplifying the voices of
+                the marginalized, and ensuring the public remains informed about
+                the challenges and triumphs shaping our global community.
                 <br />
                 <br />
-                At <strong style={{ color: "rgb(30, 30, 178)" }}>The Global Witness</strong>, we are transparent about our values, principles, and practices. Our commitment to credibility and integrity guides everything we do, ensuring you can trust the news you read here.
+                At{" "}
+                <strong style={{ color: "rgb(30, 30, 178)" }}>
+                  The Global Witness
+                </strong>
+                , we are transparent about our values, principles, and
+                practices. Our commitment to credibility and integrity guides
+                everything we do, ensuring you can trust the news you read here.
               </p>
             </div>
 
@@ -103,9 +131,7 @@ const AboutPage = () => {
           `}
         </style>
       </div>
-      <Footer />
     </>
-    
   );
 };
 

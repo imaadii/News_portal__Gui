@@ -49,15 +49,15 @@ const NewsSlider = () => {
   }
 
   return (
-    <div className="max-w-4xl mx-auto mt-10">
+    <div className="w-full h-[630px] mx-auto border-t border-dotted border-gray-300 rounded">
       {/* Slider Container */}
       <div
-        className="relative overflow-hidden rounded-lg shadow-lg bg-white w-full h-96"
+        className="relative overflow-hidden rounded-lg bg-white w-full h-full"
         aria-roledescription="carousel"
       >
         {/* Slides */}
         <div
-          className="flex transition-transform duration-500 ease-in-out"
+          className="w-full h-full flex transition-transform duration-500 ease-in-out"
           style={{
             transform: `translateX(-${currentIndex * 100}%)`,
           }}
@@ -65,9 +65,9 @@ const NewsSlider = () => {
           {news.map((item) => (
             <div
               key={item.id}
-              className="w-full flex-shrink-0 px-6 py-8 flex items-center justify-center"
+              className="w-full h-full flex-shrink-0 px-6 py-8 flex items-center justify-center"
             >
-              <div className="text-center">
+              <div className="text-center h-full w-full">
                 <h2 className="text-2xl font-bold mb-4 text-gray-800">{item.title}</h2>
                 <p className="text-gray-600 text-sm mb-4">
                   {item.description?.slice(0, 120)}...
@@ -75,7 +75,7 @@ const NewsSlider = () => {
                 <img
                   src={item.image}
                   alt={item.title}
-                  className="w-full h-48 object-cover rounded-lg"
+                  className="w-full h-96 object-contain rounded-lg"
                 />
               </div>
             </div>
@@ -99,7 +99,7 @@ const NewsSlider = () => {
         </button>
 
         {/* Indicators */}
-        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+        <div className="absolute bottom-14 left-1/2 transform -translate-x-1/2 flex space-x-2">
           {news.map((_, index) => (
             <button
               key={index}
