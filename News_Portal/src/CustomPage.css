@@ -1,0 +1,170 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  .custom-page {
+    padding: 20px;
+  }
+  
+  /* .toggle-button {
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  } */
+  
+  .news-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .news-container {
+    width: 80%;
+    max-width: 1533px;
+    background-color: #fff;
+    border: 2px solid #fff;
+    border-radius: 9px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .news-title {
+    font-size: 24px;
+    font-weight: bold;
+    border: 2px solid #fdfafa;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+  
+  .news-category {
+    font-size: 18px;
+    color: #555;
+    border: 2px solid #faf8f8;
+    margin-bottom: 15px;
+    padding: 10px;
+  }
+  
+  .news-image-container {
+    border: 2px solid #fdfbfb;
+    margin-bottom: 15px;
+  }
+  
+  .news-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  /* .news-desc {
+    font-size: 16px;
+    color: #666;
+    border: 2px solid #fcf9f9;
+    padding: 10px;
+  } */
+
+  .news-desc {
+    font-size: 18px; /* Increased font size */
+    color: #333; /* Darker color for better readability */
+    border: 2px solid #fff; /* Keep a solid border */
+    padding: 15px; /* Add padding for spacing */
+    max-height: 300px; /* Increased height for larger content */
+    max-width: 100%; /* Make sure it doesn’t exceed container width */
+    overflow: hidden; /* Hide overflowing content initially */
+    text-overflow: ellipsis; /* Add ellipsis for truncated text */
+    white-space: pre-wrap; /* Preserve spacing and allow text wrapping */
+    line-height: 1.5; /* Improve text spacing for better readability */
+    word-wrap: break-word; /* Break long words to prevent horizontal overflow */
+    height: 200px;
+  }
+  
+  .news-desc:hover {
+    overflow: auto; /* Enable both vertical and horizontal scrolling on hover */
+    max-height: 400px; /* Allow larger height on hover */
+    max-width: 100%; /* Ensure content width doesn’t exceed container */
+  }
+  
+  /* Custom scrollbar styles */
+  .news-desc::-webkit-scrollbar {
+    width: 8px; /* Width of vertical scrollbar */
+    height: 8px; /* Height of horizontal scrollbar */
+  }
+  
+  .news-desc::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Light background for scrollbar track */
+    border-radius: 4px;
+  }
+  
+  .news-desc::-webkit-scrollbar-thumb {
+    background: #888; /* Darker color for scrollbar handle */
+    border-radius: 4px;
+  }
+  
+  .news-desc::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Darker on hover */
+  }
+  
+  
+  
+  .news-form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 2px solid #000;
+    border-radius: 8px;
+  }
+  
+  .news-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* .form-buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .form-buttons button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .form-buttons button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .form-buttons button[type="button"] {
+    background-color: #ccc;
+  }
+   */
